@@ -406,7 +406,7 @@ class EmployeeList extends LitElement {
               window.location.reload(); // Sayfanın yenilenmesi için burada ekleme yapıyoruz
             }}
           >
-            <fa-icon class="fas fa-list" color="#f15b15" size="2em"></fa-icon>
+            <fa-icon class="fa fa-list" color="#f15b15" size="2em"></fa-icon>
           </button>
           <button
             class=${this.viewMode === "table" ? "active" : ""}
@@ -416,7 +416,7 @@ class EmployeeList extends LitElement {
             }}
           >
             <fa-icon
-              class="fas fa-table-cells"
+              class="fa fa-table-cells"
               color="#f15b15"
               size="2em"
             ></fa-icon>
