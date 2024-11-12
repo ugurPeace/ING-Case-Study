@@ -167,8 +167,8 @@ class EmployeeForm extends LitElement {
 
   handleClose() {
     const urlParams = new URLSearchParams(window.location.search);
-    const view = urlParams.get("view") || "list"; // Varsayılan liste görünümü
-    window.location.href = `/?page=${this.currentPage}&view=${view}`;
+    const viewMode = urlParams.get("viewMode") || "list"; // Varsayılan 'list' görünümü
+    window.location.href = `/?page=${this.currentPage}&viewMode=${viewMode}`; // viewMode parametresiyle yönlendir
   }
 
   handleSubmit(event) {

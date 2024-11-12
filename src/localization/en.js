@@ -11,6 +11,8 @@ export default {
   email: "Email",
   phone: "Phone",
   updateEmployee: "Update Employee",
+  listView: "List",
+  tableView: "Table",
 
   firstName: "First Name",
   lastName: "Last Name",

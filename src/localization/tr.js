@@ -23,7 +23,8 @@ export default {
   searchPlaceholder: "Çalışanlarda ara..",
   yes: "Evet",
   no: "Hayır",
-
+  listView: "Liste",
+  tableView: "Tablo",
   firstNameRequired: "İsim gerekli.",
   lastNameRequired: "Soyad gerekli.",
   emailRequired: "Email gerekli",

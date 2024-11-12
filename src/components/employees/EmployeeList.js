@@ -30,6 +30,7 @@ class EmployeeList extends LitElement {
       cursor: pointer;
       border: none;
       background-color: transparent;
+      color: #f15b15;
     }
 
     tr.selected {
@@ -45,8 +46,11 @@ class EmployeeList extends LitElement {
     }
     .view-buttons button {
       margin-right: 12px;
-      border: none;
-      font-family: "Font Awesome 5 Free";
+      border: 1px solid;
+      color: #f15b15;
+      padding: 6px 8px;
+      border-radius: 10px;
+
       cursor: pointer;
     }
 
@@ -58,10 +62,6 @@ class EmployeeList extends LitElement {
       padding: 20px;
     }
 
-    .fas {
-      font-size: 14px;
-      color: #f15b15;
-    }
     .card {
       border: 1px solid #ddd;
       border-radius: 8px;
@@ -76,8 +76,9 @@ class EmployeeList extends LitElement {
     .card-detail {
       margin: 4px 0;
     }
-    .card-actions {
+    .card-actions button {
       margin-top: 8px;
+      color: #f15b15;
     }
     .edit-btn,
     .delete-btn {
@@ -412,7 +413,7 @@ class EmployeeList extends LitElement {
               window.location.reload(); // Sayfanın yenilenmesi için burada ekleme yapıyoruz
             }}
           >
-            <fa-icon class="fas fa-list" color="#f15b15" size="2em"></fa-icon>
+            ${t("listView")}
           </button>
           <button
             class=${this.viewMode === "table" ? "active" : ""}
@@ -421,11 +422,7 @@ class EmployeeList extends LitElement {
               window.location.reload(); // Sayfanın yenilenmesi için burada ekleme yapıyoruz
             }}
           >
-            <fa-icon
-              class="fas fa-table-cells"
-              color="#f15b15"
-              size="2em"
-            ></fa-icon>
+            ${t("tableView")}
           </button>
         </div>
 
@@ -471,18 +468,10 @@ class EmployeeList extends LitElement {
                       <td>${employee.position}</td>
                       <td>
                         <button @click=${() => this.handleEdit(employee.id)}>
-                          <fa-icon
-                            class="fas fa-pen-to-square"
-                            color="#f15b15"
-                            size="1em"
-                          ></fa-icon>
+                          ${t("edit")}
                         </button>
                         <button @click=${() => this.handleDelete(employee.id)}>
-                          <fa-icon
-                            class="fas fa-trash"
-                            color="#f15b15"
-                            size="1em"
-                          ></fa-icon>
+                          ${t("delete")}
                         </button>
                       </td>
                     </tr>
@@ -496,7 +485,7 @@ class EmployeeList extends LitElement {
                 ?disabled=${this.currentPage === 1}
                 @click=${() => this.changePage(this.currentPage - 1)}
               >
-                <fa-icon class="fas fa-angle-left" size="1.5em"></fa-icon>
+                <
               </button>
 
               ${Array(Math.ceil(this.filteredEmployees.length / this.pageSize))
@@ -518,7 +507,7 @@ class EmployeeList extends LitElement {
                 Math.ceil(this.filteredEmployees.length / this.pageSize)}
                 @click=${() => this.changePage(this.currentPage + 1)}
               >
-                <fa-icon class="fas fa-angle-right" size="1.5em"></fa-icon>
+                >
               </button>
             </div>
           `
@@ -538,18 +527,10 @@ class EmployeeList extends LitElement {
                     </div>
                     <div class="card-actions">
                       <button @click=${() => this.handleEdit(employee.id)}>
-                        <fa-icon
-                          class="fas fa-pen-to-square"
-                          color="#f15b15"
-                          size="1em"
-                        ></fa-icon>
+                        ${t("edit")}
                       </button>
                       <button @click=${() => this.handleDelete(employee.id)}>
-                        <fa-icon
-                          class="fas fa-trash"
-                          color="#f15b15"
-                          size="1em"
-                        ></fa-icon>
+                        ${t("delete")}
                       </button>
                     </div>
                   </div>
@@ -563,7 +544,7 @@ class EmployeeList extends LitElement {
                 ?disabled=${this.currentPage === 1}
                 @click=${() => this.changePage(this.currentPage - 1)}
               >
-                <fa-icon class="fas fa-angle-left" size="1.5em"></fa-icon>
+                <
               </button>
 
               ${Array(Math.ceil(this.filteredEmployees.length / this.pageSize))
@@ -585,7 +566,7 @@ class EmployeeList extends LitElement {
                 Math.ceil(this.filteredEmployees.length / this.pageSize)}
                 @click=${() => this.changePage(this.currentPage + 1)}
               >
-                <fa-icon class="fas fa-angle-right" size="1.5em"></fa-icon>
+                >
               </button>
             </div>
           `}
