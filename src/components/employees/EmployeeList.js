@@ -46,7 +46,7 @@ class EmployeeList extends LitElement {
     .view-buttons button {
       margin-right: 12px;
       border: none;
-
+      font-family: "Font Awesome 5 Free";
       cursor: pointer;
     }
 
@@ -211,6 +211,7 @@ class EmployeeList extends LitElement {
       top: 4px;
       font-size: 16px;
       color: #e3e3e3;
+      font-family: "Font Awesome 5 Free";
     }
   `;
 
