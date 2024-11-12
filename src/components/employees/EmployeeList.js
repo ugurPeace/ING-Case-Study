@@ -57,6 +57,11 @@ class EmployeeList extends LitElement {
       gap: 20px;
       padding: 20px;
     }
+
+    .fas {
+      font-size: 14px;
+      color: #f15b15;
+    }
     .card {
       border: 1px solid #ddd;
       border-radius: 8px;
